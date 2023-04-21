@@ -14906,7 +14906,7 @@ html[data-sidenav-size=condensed]:not([data-layout=topnav]) .wrapper .help-box, 
 
 html[data-sidenav-size=condensed]:not([data-layout=topnav]) .wrapper .content-page {
     margin-left: var(--ct-leftbar-width-sm);
-    min-height: var(--ct-leftbar-condensed-height)
+    min-height: var(--ct-leftbar-condensed-height);
 }
 
 html[data-sidenav-size=compact]:not([data-layout=topnav]) .wrapper .navbar-custom {
@@ -15508,9 +15508,6 @@ html[data-theme=dark] #light-dark-mode .ri-moon-line::before {
     -ms-flex-align: center;
     align-items: center;
     gap: 10px;
-    border-width: 0 1px;
-    border-style: solid;
-    border-color: var(--ct-topbar-user-border);
     background-color: var(--ct-topbar-user-bg);
     min-height: var(--ct-topbar-height);
     -webkit-transition: none;
@@ -17469,10 +17466,6 @@ html {
     body {
         cursor: pointer
     }
-}
-
-body {
-    overflow-x: hidden
 }
 
 a, button {
@@ -21472,4 +21465,10 @@ div.dataTables_scrollBody > table > :not(:first-child) {
 
 .gantt-container .popup-wrapper .pointer {
     display: none
+}
+
+
+html, body{
+    min-width: 1200px;
+    min-height: 100vh;
 }

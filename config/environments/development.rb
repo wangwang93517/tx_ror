@@ -60,11 +60,11 @@ Rails.application.configure do
   config.assets.quiet = true
 
   # 启用多线程日志分离
-  config.logger = ActiveSupport::Logger.new(config.paths['log'].first, 5, 50.megabytes)
+  config.logger = ActiveSupport::Logger.new(config.paths["log"].first, 5, 50.megabytes)
 
   # 配置日志分离的文件名和格式
   config.logger.formatter = proc { |severity, timestamp, progname, msg|
-    "#{timestamp.strftime('%Y-%m-%d %H:%M:%S.%L %z')} [#{severity}] [#{progname}] #{msg}\n"
+    "#{timestamp.strftime("%Y-%m-%d %H:%M:%S.%L %z")} [#{severity}] [#{progname}] #{msg}\n"
   }
   config.logger = ActiveSupport::TaggedLogging.new(config.logger)
 

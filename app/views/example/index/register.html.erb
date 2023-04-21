@@ -29,6 +29,12 @@
 
           <div class="card-body p-4">
             <form action="#">
+
+              <div class="mb-3">
+                <label for="username" class="form-label">用户名</label>
+                <input class="form-control" type="text" id="username" placeholder="请输入姓名" required>
+              </div>
+
               <div class="mb-3">
                 <label for="email" class="form-label">邮箱</label>
                 <input class="form-control" type="email" id="email" autocomplete="off" placeholder="请输入邮箱地址">
@@ -44,21 +50,18 @@
                 </div>
               </div>
 
-              <div class="mb-3 mb-3">
+              <div class="mb-3">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="checkbox-signin" checked>
-                  <label class="form-check-label" for="checkbox-signin">记住账号</label>
-                  <a href="" class="text-muted float-end"><small class="fw-bolder">忘记密码</small></a>
+                  <input type="checkbox" class="form-check-input" id="checkbox-signup">
+                  <label class="form-check-label" for="checkbox-signup">已阅读并同意 <a href="" class="fw-bolder">服务条款</a></label>
                 </div>
               </div>
 
-              <div class="mb-3 mb-0 text-center">
-                <button class="btn btn-primary d-block w-100" type="button" data-action="click->eg_sign#submitLoginForm">
-                  登 录
+              <div class="mb-3 text-center">
+                <button class="btn btn-primary d-block w-100" type="button" data-action="click->eg_sign#submitRegisterForm">
+                  注  册
                 </button>
-                <p class="text-muted my-4">点击「登录」表示已阅读并同意 <a href="" class="fw-bolder">服务条款</a></p>
               </div>
-
             </form>
           </div> <!-- end card-body -->
         </div>
@@ -66,7 +69,7 @@
 
         <div class="row mt-3">
           <div class="col-12 text-center">
-            <p class="text-muted">没有账户？ <a href="<%= example_register_path %>" class="fw-bolder">免费注册</a></p>
+            <p class="text-muted">已有账户？ <a href="<%= example_login_path %>" class="fw-bolder">立即登录</a></p>
           </div> <!-- end col -->
         </div>
         <!-- end row -->

@@ -1,17 +1,30 @@
+<!--this is login page-->
 <!DOCTYPE html>
-<html lang="en">>
-  <head>
-    <meta charset="utf-8" />
-    <title>Example</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= javascript_importmap_tags %>
-    <%= stylesheet_link_tag "application_example", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag 'application_example' %>
-  </head>
+<html lang="en" data-theme="light" data-layout-mode="fluid" data-menu-color="light" data-topbar-color="light" data-layout-position="fixed" data-sidenav-size="default" class="menuitem-active ">
+<head>
+  <meta charset="utf-8"/>
+  <title>Log In | Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application_example", "data-turbo-track": "reload" %>
+</head>
+
+<body class="d-none">
+
+<!-- Begin page -->
+<div class="wrapper">
+  <%= render "layouts/components/topbar" %>
+  <%= render "layouts/components/sidebar" %>
+  <div class="content-page">
+    <div class="content">
+      <%= yield %>
+    </div>
+    <%= render "layouts/components/footer" %>
+  </div>
+</div>
+<%= javascript_importmap_tags %>
+<%= javascript_import_module_tag "application_example" %>
+</body>
 </html>

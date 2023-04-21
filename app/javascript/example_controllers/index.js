@@ -4,5 +4,5 @@
 
 import { application } from "./application"
 
-import ExampleLoginController from "./login_controller"
-application.register("example-login", ExampleLoginController)
+import ExampleSignController from "./sign_controller"
+application.register("eg_sign", ExampleSignController)

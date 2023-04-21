@@ -1,9 +1,9 @@
 import {Controller} from "@hotwired/stimulus"
 import "jquery"
-// Connects to data-controller="example_controllers--login"
+
 export default class extends Controller {
     connect() {
-        console.log('example_controllers login Controller')
+        console.log('Sign Controller')
     }
 
     togglePassword(event) {
@@ -18,9 +18,16 @@ export default class extends Controller {
         }
     }
 
-    submitForm(){
+    submitLoginForm() {
         const email = $('#email').val().trim()
         const password = $('#password').val().trim()
         console.log(email, password)
+    }
+
+    submitRegisterForm() {
+        const username = $('#username').val().trim()
+        const email = $('#email').val().trim()
+        const password = $('#password').val().trim()
+        console.log(username, email, password)
     }
 }

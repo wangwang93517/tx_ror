@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   namespace :example do
-    get 'login', to: "index#login"
+    root "index#index"
+
+    get "login", to: "index#login"
+    get "register", to: "index#register"
   end
 end
